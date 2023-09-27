@@ -14,3 +14,20 @@ function getFullResponseFromAPI(success) {
     }
   });
 }
+
+// Example usage:
+getFullResponseFromAPI(true)
+  .then(response => {
+    console.log('Resolved:', response);
+  })
+  .catch(error => {
+    console.error('Rejected:', error.message);
+  });
+
+getFullResponseFromAPI(false)
+  .then(response => {
+    console.log('Resolved:', response);
+  })
+  .catch(error => {
+    console.error('Rejected:', error.message);
+  });
