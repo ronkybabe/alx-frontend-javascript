@@ -1,33 +1,9 @@
-function getFullResponseFromAPI(success) {
+export default function getFullResponseFromAPI(success) {
   return new Promise((resolve, reject) => {
     if (success) {
-      // Resolve the promise with a successful response
-      const response = {
-        status: 200,
-        body: 'Success',
-      };
-      resolve(response);
+      resolve({ status: 200, body: 'Success' });
     } else {
-      // Reject the promise with an error message
-      const error = new Error('The fake API is not working currently');
-      reject(error);
+      reject(new Error('The fake API is not working'));
     }
   });
 }
-
-// Example usage:
-getFullResponseFromAPI(true)
-  .then(response => {
-    console.log('Resolved:', response);
-  })
-  .catch(error => {
-    console.error('Rejected:', error.message);
-  });
-
-getFullResponseFromAPI(false)
-  .then(response => {
-    console.log('Resolved:', response);
-  })
-  .catch(error => {
-    console.error('Rejected:', error.message);
-  });
