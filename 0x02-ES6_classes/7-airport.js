@@ -6,6 +6,7 @@ export default class Airport {
   }
 
   toString() {
+   // Override the default to String() method to return a customized string
     return (`[object ${this._code}]`);
   }
 }
