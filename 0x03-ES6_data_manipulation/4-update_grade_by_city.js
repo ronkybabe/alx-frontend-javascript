@@ -4,7 +4,6 @@ const updateStudentGradeByCity = (students, city, newGrades) => {
   if (!Array.isArray(students) || !Array.isArray(newGrades)) {
     return [];
   }
-  // Filter the 'students' array to get students from the specified 'city,' and update their grades using 'newGrades.'
   const studentsByCity = students
     .filter((student) => student.location === city)
     .map((student) => {
